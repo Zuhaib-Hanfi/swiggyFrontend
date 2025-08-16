@@ -1,0 +1,27 @@
+{
+  "name": "swiggyclone",
+  "version": "1.0.0",
+  "description": "Created Swiggy Clone using React",
+  "scripts": {
+    "dev": "parcel index.html --port 1234",
+    "build": "parcel build index.html",
+    "clean": "rm -rf .parcel-cache dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.8.2",
+    "@tailwindcss/postcss": "^4.1.11",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "node-fetch": "^2.7.0",
+    "parcel": "^2.15.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
+    "react-redux": "^9.2.0",
+    "react-router": "^7.7.0",
+    "tailwindcss": "^4.1.11"
+  }
+}

@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(128, 128, 128, 0.31);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color:#ff7000; /* Tailwind's blue-500 */
+  border-radius: 10px;
+
+}
+.custom-text{
+  -webkit-text-stroke: 1.5px black;
+}
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
