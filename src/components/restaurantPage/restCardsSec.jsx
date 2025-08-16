@@ -7,10 +7,11 @@ export default function RestCardsSec() {
         async function fetchData() {
             // const proxyServer = "https://cors-anywhere.herokuapp.com/";
             const swiggyAPI = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
-            const proxyServer = "http://localhost:8080/proxy?url=" + encodeURIComponent(swiggyAPI);
+            // const proxyServer = "http://localhost:8080/proxy?url=";
+            const proxyServer="https://swiggyproxyserver.onrender.com/proxy?url=";
             
             try {
-                const response = await fetch(proxyServer);
+                const response = await fetch(proxyServer+encodeURIComponent(swiggyAPI));
                 const data = await response.json();
                 const restaurants = data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
                 if (restaurants) setData(restaurants);

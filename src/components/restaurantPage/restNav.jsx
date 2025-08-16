@@ -5,7 +5,6 @@ import { MdLocalOffer } from "react-icons/md";
 import { RiBriefcaseLine } from "react-icons/ri";
 import { useSelector } from "react-redux";
 
-
 export default function RestNav() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -48,9 +47,11 @@ export default function RestNav() {
           <a href="https://www.swiggy.com/corporate" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-[#ff5600]">
             <RiBriefcaseLine size={18} /> Swiggy Corporate
           </a>
-          <a href="#" className="flex items-center gap-2 hover:text-[#ff5600]">
-            <FiSearch size={18} /> Search
-          </a>
+          <Link to={"/city/delhi/16866/search"}>
+            <div className="flex items-center gap-2 hover:text-[#ff5600]">
+              <FiSearch size={18} /> Search
+            </div>
+          </Link>
           <a href="#" className="flex items-center gap-2 hover:text-[#ff5600]">
             <MdLocalOffer size={18} /> Offers <span className="text-xs text-orange-500 font-bold">NEW</span>
           </a>
@@ -61,9 +62,9 @@ export default function RestNav() {
             <FiUser size={18} /> Sign In
           </a>
           <Link to={"/checkout"}>
-          <div className="flex items-center gap-2 hover:text-[#ff5600]">
-            <FiShoppingCart size={18} /> Cart <span className={`${(counter>0)?"text-[#ff5600] text-lg": "text-black text-sm"}`}>{counter}</span>
-          </div>
+            <div className="flex items-center gap-2 hover:text-[#ff5600]">
+              <FiShoppingCart size={18} /> Cart <span className={`${(counter > 0) ? "text-[#ff5600] text-lg" : "text-black text-sm"}`}>{counter}</span>
+            </div>
           </Link>
         </div>
       </nav>
@@ -88,7 +89,7 @@ export default function RestNav() {
               <FiUser size={18} /> Sign In
             </a>
             <Link to={"/checkout"}></Link>
-            <div  className="flex items-center gap-2 hover:text-gray-200">
+            <div className="flex items-center gap-2 hover:text-gray-200">
               <FiShoppingCart size={18} /> Cart <span>{counter}</span>
             </div>
           </div>

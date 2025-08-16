@@ -15,7 +15,8 @@ export default function DishSearch() {
             // const proxyServer = "https://cors-anywhere.herokuapp.com/";
             const swiggyAPI = `https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId=${id}`;
             const encodedURL = encodeURIComponent(swiggyAPI);
-            const proxyServer = "http://localhost:8080/proxy?url=";
+            // const proxyServer = "http://localhost:8080/proxy?url=";
+            const proxyServer=" https://swiggyproxyserver.onrender.com/proxy?url=";
             try {
                 const response = await fetch(proxyServer + encodedURL);
                 const data = await response.json();

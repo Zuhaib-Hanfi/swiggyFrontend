@@ -19,7 +19,8 @@ export default function RestaurantMenu() {
             // const proxyServer = "https://cors-anywhere.herokuapp.com/";
             const swiggyAPI = `https://www.swiggy.com/mapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.7040592&lng=77.10249019999999&restaurantId=${id}`;
             const encodedURL = encodeURIComponent(swiggyAPI);
-            const proxyServer = "http://localhost:8080/proxy?url=";
+            // const proxyServer = "http://localhost:8080/proxy?url=";
+            const proxyServer = "https://swiggyproxyserver.onrender.com/proxy?url=";
             try {
                 const response = await fetch(proxyServer + encodedURL);
                 const data = await response.json();
@@ -44,7 +45,7 @@ export default function RestaurantMenu() {
     }
     return (
         <>
-            
+
             <RestHeader restInfo={restInfo} />
             <Link to={`/city/delhi/${id}/search`}>
                 <div className="w-[70%] flex justify-center gap-4 items-center bg-gray-100 mt-10 mx-auto h-14 rounded-2xl text-gray-500 text-2xl font-bold hover:animate-pulse"><FiSearch />Search for dishes</div>
